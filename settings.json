@@ -1,0 +1,97 @@
+{
+  "files.exclude": {
+    "**/*.jpg": true,
+    "**/*.png": true,
+    "**/*.mp3": true,
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.activityBar.location": "bottom",
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 20,
+  "workbench.tree.renderIndentGuides": "always",
+  "window.openFoldersInNewWindow": "on",
+  "diffEditor.wordWrap": "on",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "variable.other",
+        "settings": {
+          "foreground": "#0fc40f" // 这里的"#FF0000"代表红色，你可以修改为你想要的颜色
+        }
+      },
+      {
+        "scope": "variable.property", // 特定于键名
+        "settings": {
+          "foreground": "#00FFFF" // 不同的颜色
+        }
+      },
+      {
+        "name": "let variable",
+        "scope": [
+          "variable.other.readwrite.js"
+        ],
+        "settings": {
+          "foreground": "#df4f0d"
+        }
+      }
+    ]
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "‮": true
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "window.confirmSaveUntitledWorkspace": false,
+  "git.ignoreMissingGitWarning": true,
+  "workbench.editor.wrapTabs": true,
+  "editor.wordWrap": "on",
+  "breadcrumbs.enabled": false,
+  "codeQL.telemetry.enableTelemetry": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "eslint.workingDirectories": [
+    "D:/GAME/无名杀PC/resources/app/extension"
+  ],
+  "eslint.validate": [
+    "javascript"
+  ],
+  "eslint.configFile": "eslint.config.mjs",
+  "eslint.maxWarnings": 50,
+  "editor.formatOnType": true,
+  "workbench.editor.empty.hint": "hidden",
+  "prettier.printWidth": 9999,
+  "prettier.singleQuote": true,
+  "prettier.proseWrap": "never",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "prettier.jsxSingleQuote": true,
+  "editor.pasteAs.preferences": [],
+  "eslint.codeActionsOnSave.rules": null,
+  "prettier.useTabs": true,
+  "prettier.ignorePath": "",
+  "prettier.useEditorConfig": false,
+  "prettier.configPath": "./prettier.config.mjs",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "extensions.trustedPublishers": [
+    "esbenp",
+    "plibither8",
+    "ryu1kn"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "search.searchOnTypeDebouncePeriod": 5000,
+  "C/Users/ltjzl/AppData/Roaming/Code - Insiders/User/settings.json": ""
+}
