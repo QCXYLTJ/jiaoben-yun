@@ -4,7 +4,7 @@ export default {
 	arrowParens: "always",
 	bracketSpacing: true,
 	endOfLine: "lf",
-	printWidth: 999,
+	printWidth: 9999,
 	proseWrap: "preserve",
 	quoteProps: "as-needed",
 	semi: true,
