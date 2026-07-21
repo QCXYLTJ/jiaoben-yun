@@ -1,4 +1,4 @@
-Get-ChildItem -Filter *.js | ForEach-Object {
+Get-ChildItem -Recurse -Filter *.js | ForEach-Object {
     $filename = $_.FullName
     Write-Host "Processing file: $filename"
     # 使用UTF-8编码读取文件
@@ -40,31 +40,10 @@ Get-ChildItem -Filter *.js | ForEach-Object {
     $content = $content -replace 'for \(i', 'for (let i'
     $content = $content -replace 'for \(var i =', 'for (let i ='
     $content = $content -replace 'for \(var i of', 'for (const i of'
-    $content = $content -replace 'for \(let i = 0; i < game\.players\.length; i\+\+\)', 'for (const i of game.players)'
-    $content = $content -replace 'game\.players\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < event\.players\.length; i\+\+\)', 'for (const i of event.players)'
-    $content = $content -replace 'event\.players\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < trigger\.players\.length; i\+\+\)', 'for (const i of trigger.players)'
-    $content = $content -replace 'trigger\.players\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < result\.links\.length; i\+\+\)', 'for (const i of result.links)'
-    $content = $content -replace 'result\.links\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < event\.cards\.length; i\+\+\)', 'if (Array.isArray(event.cards)) for (const i of event.cards)'
-    $content = $content -replace 'event\.cards\[i\]', 'i'
-    $content = $content -replace 'for \(let i = event\.cards\.length - 1; i >= 0; i--\)', 'if (Array.isArray(event.cards)) for (const i of event.cards)'
-    $content = $content -replace 'for \(let i = 0; i < trigger\.cards\.length; i\+\+\)', 'if (Array.isArray(trigger.cards)) for (const i of trigger.cards)'
-    $content = $content -replace 'trigger\.cards\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < result\.cards\.length; i\+\+\)', 'if (Array.isArray(result.cards)) for (const i of result.cards)'
-    $content = $content -replace 'result\.cards\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < ui\.selected\.cards\.length; i\+\+\)', 'if (Array.isArray(ui.selected.cards)) for (const i of ui.selected.cards)'
-    $content = $content -replace 'ui\.selected\.cards\[i\]', 'i'
-    $content = $content -replace 'for \(let i = 0; i < evt\.cards\.length; i\+\+\)', 'if (Array.isArray(evt.cards)) for (const i of evt.cards)'
-    $content = $content -replace 'evt\.cards\[i\]', 'i'
+    $content = $content -replace 'for \(var i in', 'for (const i in'
     $content = $content -replace 'return event\.source\.', 'return event.source && event.source.'
     $content = $content -replace 'return event\.cards\.', 'return event.cards && event.cards.'
     $content = $content -replace 'return event\.card\.', 'return event.card && event.card.'
-    $content = $content -replace '\(evt\.filterCard\(', '(evt.filterCard && evt.filterCard('
-    $content = $content -replace '\(!event\.filterCard\(', '(!event.filterCard || !event.filterCard('
-    $content = $content -replace '\(event\.filterCard\(', '(event.filterCard && event.filterCard('
     $content = $content -replace "。'", "'"
     $content = $content -replace '。', '.'
     $content = $content -replace '，', ','
