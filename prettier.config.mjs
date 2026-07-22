@@ -4,11 +4,11 @@ export default {
 	arrowParens: "always",
 	bracketSpacing: true,
 	endOfLine: "lf",
-	printWidth: 9999,
+	printWidth: 99999,
 	proseWrap: "preserve",
 	quoteProps: "as-needed",
 	semi: true,
 	tabWidth: 4,
-	trailingComma: "es5",
 	useTabs: true,
+	trailingComma: "all",
 };
